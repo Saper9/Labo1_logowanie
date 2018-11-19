@@ -15,8 +15,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onButtonClick(View v){
-        Log.d("Proba", "Wiadomosc");
-        Toast temp = Toast.makeText(getApplicationContext(), "Cześć!", Toast.LENGTH_LONG);
-        temp.show();
+        String name = findViewById(R.id.name).toString();
+        String password = findViewById(R.id.passwordEdit).toString();
+        if(name.equals("Ola") && password.equals("Ola123")) {
+            Log.d("Logowanie", "Ola sie zalogowala.");
+            Toast temp = Toast.makeText(getApplicationContext(), "Cześć Ola!", Toast.LENGTH_LONG);
+            temp.show();
+        }
     }
 }
